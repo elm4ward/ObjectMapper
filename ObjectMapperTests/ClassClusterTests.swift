@@ -24,7 +24,7 @@ class ClassClusterTests: XCTestCase {
 	
     func testClassClusters() {
 		let carName = "Honda"
-		let JSON = ["name": carName, "type": "car"]
+		let JSON = ["name": carName, "type": "car"] as AnyObject
 		
 		if let vehicle = Mapper<Vehicle>().map(JSON){
 			XCTAssertNotNil(vehicle)
@@ -46,7 +46,7 @@ class ClassClusterTests: XCTestCase {
 	
 	func testClassClusterArray() {
 		let carName = "Honda"
-		let JSON = [["name": carName, "type": "car"], ["type": "bus"], ["type": "vehicle"]]
+		let JSON = [["name": carName, "type": "car"], ["type": "bus"], ["type": "vehicle"]] as AnyObject
 		
 		if let vehicles = Mapper<Vehicle>().mapArray(JSON){
 			XCTAssertNotNil(vehicles)

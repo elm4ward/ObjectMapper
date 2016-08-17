@@ -45,7 +45,7 @@ class BasicTypes: Mappable {
 	var string: String = ""
 	var stringOptional: String?
 	var stringImplicityUnwrapped: String!
-	var anyObject: AnyObject = true
+	var anyObject = true as AnyObject
 	var anyObjectOptional: AnyObject?
 	var anyObjectImplicitlyUnwrapped: AnyObject!
 	

@@ -24,7 +24,7 @@ class MappableTypesWithTransformsTests: XCTestCase {
 					"full_name": "Mineski",
 					"short_name": "Mski",
 					"players": ["/players/6", "/players/7", "/players/8", "/players/9", "/players/10"]
-				]],
+				]] as AnyObject,
 			"game": [
 				"api_uri": "/games/2723",
 				"game_time": "33:49",
@@ -55,8 +55,8 @@ class MappableTypesWithTransformsTests: XCTestCase {
 				],
 				"teams": ["/teams/43", "/teams/8"],
 				"winning_team_url": "/teams/8"
-			]
-		]
+				] as AnyObject
+		] as [String : AnyObject]
 	}
 	
 	

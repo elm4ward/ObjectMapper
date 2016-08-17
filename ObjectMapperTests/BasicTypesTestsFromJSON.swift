@@ -122,7 +122,7 @@ class BasicTypesTestsFromJSON: XCTestCase {
 
 	func testMappingStringFromNSStringJSON(){
 		let value: String = "STRINGNGNGG"
-		let JSONNSString : NSString = "{\"string\" : \"\(value)\", \"stringOpt\" : \"\(value)\", \"stringImp\" : \"\(value)\"}"
+		let JSONNSString = "{\"string\" : \"\(value)\", \"stringOpt\" : \"\(value)\", \"stringImp\" : \"\(value)\"}" as NSString
 		
 		let mappedObject = mapper.map(JSONNSString)
 
@@ -401,10 +401,10 @@ class BasicTypesTestsFromJSON: XCTestCase {
 	}
 
 	func testObjectModelOptionalDictionnaryOfPrimitives() {
-		let JSON: [String: [String: AnyObject]] = ["dictStringString":["string": "string"], "dictStringBool":["string": false], "dictStringInt":["string": 1], "dictStringDouble":["string": 1.1], "dictStringFloat":["string": 1.2]]
+		let JSON: [String: [String: AnyObject]] = ["dictStringString":["string": "string" as AnyObject], "dictStringBool":["string": false as AnyObject], "dictStringInt":["string": 1 as AnyObject], "dictStringDouble":["string": 1.1 as AnyObject], "dictStringFloat":["string": 1.2 as AnyObject]]
 		
 		let mapper = Mapper<TestCollectionOfPrimitives>()
-		let testSet: TestCollectionOfPrimitives! = mapper.map(JSON)
+		let testSet: TestCollectionOfPrimitives! = mapper.map(JSON as AnyObject)
 
 		XCTAssertNotNil(testSet)
 
